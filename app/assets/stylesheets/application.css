@@ -1,15 +1,81 @@
-/*
- * This is a manifest file that'll be compiled into application.css, which will include all the files
- * listed below.
- *
- * Any CSS (and SCSS, if configured) file within this directory, lib/assets/stylesheets, or any plugin's
- * vendor/assets/stylesheets directory can be referenced here using a relative path.
- *
- * You're free to add application-wide styles to this file and they'll appear at the bottom of the
- * compiled file so the styles you add here take precedence over styles defined in any other CSS
- * files in this directory. Styles in this file should be added after the last require_* statement.
- * It is generally better to create a new file per style scope.
- *
- *= require_tree .
- *= require_self
- */
+body {
+    font-family: Georgia, serif;
+  }
+
+  .nav-item {
+    padding: 10px;
+  }
+
+  h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    text-align: center;
+
+  }
+
+  .home-buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+  }
+
+  .sign-up {
+    background-color: #4caf50;
+    color: white;
+    padding: 5px 10px;
+    text-decoration: none;
+    border-radius: 16px;
+  }
+  .log-in {
+    background-color: #033203;
+    color: white;
+    padding: 5px 10px;
+    text-decoration: none;
+    border-radius: 16px;
+  }
+  .sign-out {
+    background-color: #f44336;
+    color: white;
+    padding: 5px 10px;
+    text-decoration: none;
+    border-radius: 16px;
+  }
+
+  hr {
+    border: none;
+    border-top: 1px solid #ccc;
+    margin: 20px 0;
+  }
+
+  p {
+    margin-bottom: 10px;
+    margin: 10px 0;
+    padding: 10px 150px;
+  }
+
+  .edit {
+    background-color: #2196f3;
+    color: white;
+    padding: 5px 10px;
+    text-decoration: none;   
+  }
+  .horizontal-nav {
+    display: flex;
+    justify-content: space-between;
+    list-style-type: none;
+  }
+  
+  .horizontal-nav .nav-item {
+    margin-right: 10px;
+    padding: 10px;
+  }
+  
+  .horizontal-nav .nav-link {
+    text-decoration: none;
+    color: #ffffff;
+  }
+  
+  .navbar{
+    background-color: #000000;
+    padding: 5px;
+  }
