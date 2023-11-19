@@ -8,5 +8,5 @@ class User < ApplicationRecord
   validates :email, presence: true, length: { maximum: 150 }, format: { with: URI::MailTo::EMAIL_REGEXP }
   validates :photo, length: { maximum: 150 }
   validates :age, numericality: { only_integer: true, greater_than_or_equal_to: 14, allow_blank: true }
-  validates :sity, length: { maximum: 150 }
+  validates :city, length: { maximum: 150 }
 end
