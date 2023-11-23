@@ -1,38 +1,25 @@
 <div id="<%= dom_id product %>">
-  <p>
-    <strong>Name:</strong>
-    <%= product.name %>
-  </p>
 
-  <p>
-    <strong>Category:</strong>
-    <%= product.category %>
-  </p>
+<%= stylesheet_link_tag 'product', media: 'all' %>
+  <div class="wrapper">
+    <div class="product-img">
 
-  <p>
-    <strong>Description:</strong>
-    <%= product.description %>
-  </p>
-  <%= image_tag product.image.url, style: "width:200px; height:200px;", class: 'img-fluid rounded-circle float-right' %>
-       
-  <p>
-    <strong>Full description:</strong>
-    <%= product.full_description %>
-  </p>
-
-  <p>
-    <strong>Color:</strong>
-    <%= product.color %>
-  </p>
-
-  <p>
-    <strong>Size:</strong>
-    <%= product.size %>
-  </p>
-
-  <p>
-    <strong>Price:</strong>
-    <%= product.price %>
-  </p>
-
-</div>
+       <%= image_tag product.image.url, style: "width:377px; height:520px;" %>
+   
+    </div>
+    <div class="product-info">
+      <div class="product-text">
+        <h1><%= product.name %></h1>
+        <h2><%= product.description %></h2>
+        <p><%= product.full_description %> </p> 
+         <%= product.category %>
+        <%= product.size %>
+         <%= product.color %>
+      </div>
+     
+      <div class="product-price-btn">
+         <p><%= product.price %></p>
+        <button type="button">В корзину</button>
+      </div>
+    </div>
+  </div>
