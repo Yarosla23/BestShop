@@ -40,10 +40,10 @@ ActiveRecord::Schema[7.0].define(version: 2023_11_23_195039) do
     t.string "photo"
     t.integer "age"
     t.string "city"
-    t.integer "role", default: 0, null: false
+
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
-    t.index ["role"], name: "index_users_on_role"
+
   end
 
 end
