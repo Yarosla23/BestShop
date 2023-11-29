@@ -11,6 +11,7 @@
 
   <body>
     <%= render "layouts/navbar" %>
+     <p> <%= current_user&.admin?%></p>
     <% if current_user %>
       <h1 class="center-text">Ваш профиль</h1>
       <hr />
