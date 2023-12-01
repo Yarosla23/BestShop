@@ -18,8 +18,12 @@
       </div>
      
       <div class="product-price-btn">
-         <p><%= product.price %></p>
-        <button type="button">В корзину</button>
+        <p><%= number_to_currency(product.price) %></p>
+         <%= form_with(url: cart_add_path) do |f| %>
+          <%= f.hidden_field :id, value: product.id %>
+          <%= f.number_field :quantity, value: 0, min: 1 %>
+          <button type="button"><%=f.submit "В корзину"%> </button>
+        <%end%>
       </div>
     </div>
   </div>
