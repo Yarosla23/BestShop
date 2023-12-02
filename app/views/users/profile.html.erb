@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+
 <html>
   <head>
     <title>Моя страница</title>
@@ -10,7 +10,8 @@
   </head>
 
   <body>
-    <%= render "layouts/navbar" %>
+    
+    <p style="color: green"><%= notice %></p>
      <p> <%= current_user&.admin?%></p>
     <% if current_user %>
       <h1 class="center-text">Ваш профиль</h1>
@@ -36,6 +37,4 @@
         <%= image_tag "cat-head.gif", alt: "Your GIF", style: "width: 25%;" %>
       </center>
     <% end %>
-    <%= render "layouts/footer" %>
   </body>
-</html>

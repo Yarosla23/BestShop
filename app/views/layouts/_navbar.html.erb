@@ -1,14 +1,12 @@
 <nav class="navbar">
   <ul class="navbar-nav horizontal-nav">
     <li class="nav-item">
-      <%= link_to "Главная", root_path, class: "nav-link" %>
-    </li>
-    <li class="nav-item">
-      <%= link_to "Товары", products_path,  class: "nav-link" %>
-    </li>
-    <li class="nav-item">
-      <%= link_to "Корзина",  root_path, class: "nav-link" %>
-    </li>
+      <%= link_to "Главная", root_path%>
+
+      <%= link_to "Товары", products_path%>
+
+      <%= link_to "Корзина",  root_path%>
+
     
     <% if current_user %>
       <li class="nav-item">
