@@ -1,0 +1,40 @@
+
+<html>
+  <head>
+    <title>Моя страница</title>
+    <style>
+      .center-text {
+        text-align: center;
+      }
+    </style>
+  </head>
+
+  <body>
+    
+    <p style="color: green"><%= notice %></p>
+     <p> <%= current_user&.admin?%></p>
+    <% if current_user %>
+      <h1 class="center-text">Ваш профиль</h1>
+      <hr />
+      <div class="center-text">
+        <h3><%= current_user.first_name %></h3>
+        <h3><%= current_user.last_name %></h3>
+        <% if current_user.photo? %>
+          <%= image_tag current_user.photo.url, style: "width:200px; height:200px;", class: 'img-fluid rounded-circle float-right' if current_user.photo? %>
+        <% else %>
+          <%= image_tag("no.jpg", style: "width:200px; height:200px;", class: 'img-fluid rounded-circle float-right') %>
+        <% end %>
+        <p>Your email: <%= current_user.email %></p>
+        <p>Your Age: <%= current_user.age %></p>
+        <p>Your City: <%= current_user.city %></p>
+        <p>Created: <%= current_user.created_at %></p>
+        <p>Updated: <%= current_user.updated_at %></p>
+        <%= link_to "Edit Account", edit_user_registration_path, class: "edit" %>
+      </div>
+    <% else %>
+      <h1>Ваш профиль видимо еще не создан</h1>
+      <center>
+        <%= image_tag "cat-head.gif", alt: "Your GIF", style: "width: 25%;" %>
+      </center>
+    <% end %>
+  </body>

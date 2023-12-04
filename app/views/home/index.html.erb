@@ -1,23 +1,16 @@
-<%= render "layouts/navbar" %>
-<body>
-<div class="nav-item"
-><% if current_user %>
-<h1>Ваш профиль</h1>
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Моя страница</title>
+    <style>
+      .center-text {
+        text-align: center;
+      }
+    </style>
+  </head>
 
-
-<hr/> 
-    <p> Your email: <%= current_user.email %> </p>
-    <h3> <%= current_user.first_name %> </h3>
-    <h3> <%= current_user.last_name %> </h3>
-    <p> Your Age: <%= current_user.age %> </p>
-    <p> Your City: <%= current_user.city %> </p>
-    <p> Created: <%= current_user.created_at%> </p>
-    <p> Updated: <%= current_user.updated_at%> </p>
-    <%= link_to "Edit Account", edit_user_registration_path, class:"edit"%>
-<%else%>
- <h1>Ваш профиль видимо еще не создан</h1>
- <center>
- <%= image_tag "cat-head.gif", alt: "Your GIF", style: "width: 25%;" %>
-  </center>
-    <% end %>
-</body>
+  <body>
+    <%= render partial: 'cart/cart' if @render_cart%>
+     <h1> Домашняя страница</h1>
+  </body>
+</html>
