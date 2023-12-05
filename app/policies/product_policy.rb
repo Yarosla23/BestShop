@@ -21,4 +21,4 @@ class ProductPolicy < ApplicationPolicy
 
   class Scope < Scope
   end
-end 
+end

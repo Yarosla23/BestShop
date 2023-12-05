@@ -1,9 +1,8 @@
 <p style="color: green"><%= notice %></p>
 
-
 <%if current_user&.admin?%>
 <%= link_to "New product", new_product_path %>
-   <%= render "products_admin/product" %>
+   <%= render "products/product_admin" %>
 <%else%>
 <h1>Products</h1>
 <div id="products">

@@ -5,15 +5,10 @@ body {
     margin: 0px 0px 0px 0px;
   }
 
-  .nav-item {
-    padding: 10px;
-  }
-
   h1 {
-    font-size: 24px;
+    font-size: 32px;
     margin-bottom: 20px;
     text-align: center;
-
   }
 
   .home-buttons {
@@ -77,11 +72,6 @@ body {
     color: #ffffff;
   }
   
-  .navbar{
-    background-color: #000000;
-    padding: 5px;
-    
-  }
   h2 {
     font-size: 24px;
     font-weight: bold;
@@ -89,7 +79,7 @@ body {
     text-align: center;
     
   }
-  
+
   .field {
     margin-bottom: 20px;
   }
@@ -100,10 +90,9 @@ body {
     font-weight: bold;
     margin-bottom: 5px;
     text-align: center;
-    
   }
   
-  input[type="email"], input[type="password"], input[type="text"] {
+  input[type="email"], input[type="password"], input[type="text"], input[type="file"], input[type="text_area"] {
     border: 1px solid #ccc;
     border-radius: 3px;
     font-size: 16px;

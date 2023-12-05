@@ -10,8 +10,8 @@
     <%= javascript_importmap_tags %>
   </head>
 
-  <body>
-    <%= render "layouts/ff" %>
+  <body class="<%= cookies[:theme] %>"> 
+    <%= render "layouts/navbar" %>
      <%= yield %>
     <%= render "layouts/footer" %>
   </body>

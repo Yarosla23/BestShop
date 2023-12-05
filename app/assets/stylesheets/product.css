@@ -1,113 +1,106 @@
-  
-  .wrapper {
-    height: 520px;
-    width: 754px;
-    margin: 50px auto;
-    border-radius:  50px;
-    -webkit-box-shadow: 0px 14px 32px 0px rgba(0, 0, 0, 0.15);
-    -moz-box-shadow: 0px 14px 32px 0px rgba(0, 0, 0, 0.15);
-    box-shadow: 0px 14px 32px 0px rgba(0, 0, 0, 0.15);
-  }
-  
-  .product-img {
-    float: left;
-    height: 520px;
-    width: 377px;
-  }
-  
-  .product-img img {
-    border-radius: 50px 0 0 50px;
-  }
-  
-  .product-info {
-    float: left;
-    height: 520px;
-    width: 377px;
-    border-radius: 0  50px 50px  50px;
-    background-color: #ffffff;
-  }
-  
-  .product-text {
-    height: 400px;
-    width: 357px;
-  }
-  
-  .product-text h1 {
-    margin: 16px 0 0 16px;
-    padding-top: 20px;
-    font-size: 34px;
-    color: #1f1f1f;
-  }
-  
-  .product-text h1,
-  .product-price-btn p {
-    font-family: 'Bentham', serif;
-  }
-  
-  .product-text h2 {
-    margin: 16px 0 47px 16px;
-    font-size: 13px;
-    font-family: 'Raleway', sans-serif;
-    font-weight: 400;
-    text-transform: uppercase;
-    color: #949494;
-    letter-spacing: 0.2em;
-  }
-  
-  .product-text p {
-    height: 125px;
-    margin: 16px 0 0 16px;
-    font-family: 'Playfair Display', serif;
-    color: #151515;
-    line-height: 1.7em;
-    font-size: 15px;
-    font-weight: lighter;
-    overflow: hidden;
-  }
-  
-  .product-price-btn {
-    background-color: black;
-    border-radius: 0 0 50px 0;
-    height: 104px;
-    width: 377px;
-    position: relative;
-  }
+.wrapper {
+  height: 520px;
+  width: 754px;
+  margin: 50px auto;
+  border-radius: 50px;
+  -webkit-box-shadow: 0px 14px 32px 0px rgba(0, 0, 0, 0.15);
+  -moz-box-shadow: 0px 14px 32px 0px rgba(0, 0, 0, 0.15);
+  box-shadow: 0px 14px 32px 0px rgba(0, 0, 0, 0.15);
+}
 
-  
-  .product-price-btn p {
-    display: inline-block;
-    position: absolute;
-    font-family: 'Trocchi',  bold;
-    margin: 30px 0 0 30px;
-    font-size: 40px;
-    font-weight: lighter;
-    color:  #00ff51;
-  }
-  
+.product-img {
+  float: left;
+  height: 520px;
+  width: 377px;
+}
 
-  
-  .product-price-btn button {
-    float: right;
-    display: inline-block;
-    height: 70px;
-    width: 156px;
-    margin: 16px 20px  20px 20px;
-    box-sizing: border-box;
-    border: transparent;
-    border-radius: 60px;
-    font-family: 'Raleway', sans-serif;
-    font-size: 20px;
-    font-weight: 500;
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
-    font-weight: bold;
-    color: #000000;
-    background-color: #08c54d;
-    cursor: pointer;
-    outline: none;
-  }
-  
-  .product-price-btn button:hover {
-    background-color: #00ff51;
-  }
-  
+.product-img img {
+  border-radius: 50px 0 0 50px;
+}
+
+.product-info {
+  float: left;
+  height: 520px;
+  width: 377px;
+  border-radius: 0 50px 50px 50px;
+  background-color: #ffffff;
+}
+
+.product-text {
+  height: 400px;
+  width: 357px;
+}
+
+.product-text h1 {
+  margin: 16px 0 0 16px;
+  padding-top: 20px;
+  font-size: 34px;
+}
+
+.product-text h1,
+.product-price-btn p {
+  font-family: "Bentham", serif;
+}
+
+.product-text h2 {
+  margin: 16px 0 47px 16px;
+  font-size: 13px;
+  font-family: "Raleway", sans-serif;
+  font-weight: 400;
+  text-transform: uppercase;
+  color: #949494;
+  letter-spacing: 0.2em;
+}
+
+.product-text p {
+  height: 125px;
+  margin: 16px 0 0 16px;
+  font-family: "Playfair Display", serif;
+  line-height: 1.7em;
+  font-size: 15px;
+  font-weight: lighter;
+  overflow: hidden;
+}
+
+.product-price-btn {
+  background-color: black;
+  border-radius: 0 0 50px 0;
+  height: 104px;
+  width: 377px;
+  position: relative;
+}
+
+.product-price-btn p {
+  display: inline-block;
+  position: absolute;
+  font-family: "Trocchi", bold;
+  margin: 30px 0 0 30px;
+  font-size: 40px;
+  font-weight: lighter;
+  color: #00ff51;
+}
+
+.product-price-btn button {
+  float: right;
+  display: inline-block;
+  height: 70px;
+  width: 156px;
+  margin: 16px 20px 20px 20px;
+  box-sizing: border-box;
+  border: transparent;
+  border-radius: 60px;
+  font-family: "Raleway", sans-serif;
+  font-size: 20px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-weight: bold;
+  color: #000000;
+  background-color: #08c54d;
+  cursor: pointer;
+  outline: none;
+}
+
+.product-price-btn button:hover {
+  background-color: #00ff51;
+}

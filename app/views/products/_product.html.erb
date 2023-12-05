@@ -1,29 +1,30 @@
 <div id="<%= dom_id product %>">
 
 <%= stylesheet_link_tag 'product', media: 'all' %>
-  <div class="wrapper">
-    <div class="product-img">
+<div class="wrapper">
+  <div class="product-img">
 <% if product.image.url != nil %>
-       <%= image_tag product.image.url, style: "width:377px; height:520px;" %>
-   <%end%>
+      <%= image_tag product.image.url, style: "width:377px; height:520px;" %>
+  <%end%>
+  </div>
+  <div class="product-info">
+    <div class="product-text">
+      <h1><%= product.name %></h1>
+      <h2><%= product.description %></h2>
+      <p><%= product.full_description %> </p> 
+        <%= product.category %>
+      <%= product.size %>
+        <%= product.color %>
     </div>
-    <div class="product-info">
-      <div class="product-text">
-        <h1><%= product.name %></h1>
-        <h2><%= product.description %></h2>
-        <p><%= product.full_description %> </p> 
-         <%= product.category %>
-        <%= product.size %>
-         <%= product.color %>
-      </div>
-     
-      <div class="product-price-btn">
-        <p><%= number_to_currency(product.price) %></p>
-         <%= form_with(url: cart_add_path) do |f| %>
-          <%= f.hidden_field :id, value: product.id %>
-          <%= f.number_field :quantity, value: 0, min: 1 %>
-          <button type="button"><%=f.submit "В корзину"%> </button>
-        <%end%>
-      </div>
+    
+    <div class="product-price-btn">
+      <p><%= number_to_currency(product.price) %></p>
+        <%= form_with(url: cart_add_path) do |f| %>
+        <%= f.hidden_field :id, value: product.id %>
+        <%= f.number_field :quantity, value: 1, min: 1 %>
+        <button type="button"><%=f.submit "В корзину"%> </button>
+          
+      <%end%>
     </div>
   </div>
+</div>
