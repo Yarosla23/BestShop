@@ -3,8 +3,16 @@ class ProductsController < ApplicationController
   before_action :authenticate_user!, except: %i[index show]
 
   # GET /products or /products.json
+
   def index
     @products = Product.all
+    @q = Product.ransack(params[:q])
+    @products = @q.result(distinct: true)
+  end
+
+  def search
+    @q = Product.ransack(params[:q])
+    @products = @q.result(distinct: true)
   end
 
   # GET /products/1 or /products/1.json
@@ -37,6 +45,7 @@ class ProductsController < ApplicationController
   end
 
   # PATCH/PUT /products/1 or /products/1.json
+
   def update
     authorize @product
     respond_to do |format|

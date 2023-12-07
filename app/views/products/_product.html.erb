@@ -22,9 +22,16 @@
         <%= form_with(url: cart_add_path) do |f| %>
         <%= f.hidden_field :id, value: product.id %>
         <%= f.number_field :quantity, value: 1, min: 1 %>
-        <button type="button"><%=f.submit "В корзину"%> </button>
+        <button type="button" id='myButton'><%=f.submit "В корзину"%> </button>
           
       <%end%>
     </div>
   </div>
+  <script>
+    function refreshPage() {
+  location.reload();
+}
+
+document.getElementById("myButton").addEventListener("click", refreshPage);
+</script>
 </div>

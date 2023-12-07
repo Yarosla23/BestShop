@@ -2,6 +2,7 @@
    <% product = orderable.product %>
    <div id="<%= "cart-#{product.id}" %>">
    <div class="product-text">
+    
       <h1><%= product.name %></h1>
       <h2><%= product.description %></h2>
       <p><%= product.full_description %> </p> 
@@ -14,12 +15,24 @@
       <%= form_with(url: cart_add_path) do |f| %>
          <%= f.hidden_field :id, value: product.id%>
          <%= f.number_field :quantity, value: orderable.quantity, min: 0 %>
-         <button type="button"><%=f.submit "добавить"%> </button>
+         <button  id="myButton"><%=f.submit "добавить"%> </button>
       <%end%>
    </div>
       <%= form_with(url: cart_remove_path)do |f|%>
-         <%= f.hidden_field :id, value: product.id%>
-         <button type="button"><%=f.submit "Пока"%> </button>
+         <%= f.hidden_field :id, value: orderable.id%>
+         <button id="b"><%=f.submit "X"%> </button>
       <%end%>
    <%=orderable.total  %>
+   
 <%end%>
+<script>
+document.getElementById('myButton').addEventListener('click', function() {
+  location.reload();
+});
+
+function refreshPage() {
+  location.reload();
+}
+
+document.getElementById("b").addEventListener("click", refreshPage);
+</script>

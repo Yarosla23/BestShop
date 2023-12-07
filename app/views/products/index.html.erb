@@ -1,10 +1,46 @@
 <p style="color: green"><%= notice %></p>
 
-<%if current_user&.admin?%>
-<%= link_to "New product", new_product_path %>
-   <%= render "products/product_admin" %>
-<%else%>
+
 <h1>Products</h1>
+
+<%= search_form_for @q do |f| %>
+<%= f.label :name_or_description_or_full_description_cont, "Search for a product" %>
+<%= f.search_field :name_or_description_or_full_description_cont %>
+<%= f.collection_check_boxes :color_eq, Product.pluck(:color).uniq, :itself, :to_s do |b| %>
+  <div class="collection-check-box">
+    <%= b.check_box %>
+    <%= b.label class: 'inline'%>
+  </div>
+<% end %>
+<%= f.collection_check_boxes :size_eq, Product.pluck(:size).uniq, :itself, :to_s do |b| %>
+  <div class="collection-check-box">
+    <%= b.check_box %>
+    <%= b.label %>
+  </div>
+<% end %>
+<%= f.collection_check_boxes :category_eq, Product.pluck(:category).uniq, :itself, :to_s do |b| %>
+  <div class="collection-check-box">
+    <%= b.check_box %>
+    <%= b.label %>
+  </div>
+<% end %>
+<%= f.submit "Search" %>
+
+<% end %>
+
+
+
+<%if current_user&.admin?%>
+<div id="products">
+  <% @products.each do |product| %>
+
+    <%= render product %>
+
+    <p>
+      <%= link_to "Show this product", product %>
+    </p>
+  <% end %>
+<%else%>
 <div id="products">
   <% @products.each do |product| %>
     <%= render product %>
@@ -12,5 +48,5 @@
       <%= link_to "Show this product", product %>
     </p>
   <% end %>
+  <% end %>
 </div> 
-<% end %>
