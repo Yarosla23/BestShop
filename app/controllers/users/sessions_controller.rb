@@ -19,6 +19,10 @@ class Users::SessionsController < Devise::SessionsController
   # end
 
   # protected
+  def after_sign_out_path_for(resource_or_scope)
+    current_user.save_cart_as_order
+    super
+  end
 
   # If you have extra params to permit, append them to the sanitizer.
   def configure_sign_in_params
