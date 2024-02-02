@@ -7,9 +7,6 @@ class ApplicationController < ActionController::Base
   def set_render_cart
     @render_cart = true
   end
-
- 
-
    def initialize_cart
     if current_user
       @cart = current_user.cart || current_user.create_cart
